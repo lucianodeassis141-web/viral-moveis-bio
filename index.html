@@ -14,7 +14,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
 .page{max-width:560px;margin:0 auto;padding-bottom:40px}
-.capa{position:relative;height:200px;overflow:hidden}
+.capa{position:relative;height:220px;overflow:hidden}
 .capa img{width:100%;height:100%;object-fit:cover;display:block}
 .capa::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-60px;height:110px;background:var(--bg);border-radius:50% 50% 0 0}
 .topo{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;margin-top:-105px;position:relative;z-index:1}
@@ -26,25 +26,49 @@ h1{margin-top:14px;font-size:27px;font-weight:400;letter-spacing:-.01em}
 .social{display:flex;gap:16px;margin-top:16px}
 .social a{color:var(--ink);display:grid;place-items:center;width:36px;height:36px}
 .links{display:flex;flex-direction:column;gap:16px;margin-top:22px;padding:0 16px}
-.links a{display:flex;align-items:center;gap:18px;min-height:76px;padding:12px 26px;border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-size:16px;line-height:1.3;box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s}
+.links a{display:flex;align-items:center;gap:16px;min-height:74px;padding:12px 22px 12px 14px;border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-size:16px;line-height:1.3;box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s}
 .links a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
 .links a:focus-visible{outline:2px solid var(--lar);outline-offset:3px}
-.links a .ic{width:30px;height:30px;flex-shrink:0;display:grid;place-items:center}
-.links a.top{background:var(--lar);color:#fff}
+.links a .ic{width:46px;height:46px;border-radius:50%;background:#F3F3F3;flex-shrink:0;display:grid;place-items:center}
+.links a.top .ic{background:rgba(255,255,255,.18)}
+.links a .t{flex:1}
+.links a .seta{color:#B5B5B5;font-size:22px;line-height:1}
+.links a.top .seta{color:#fff}
+.links a.top{background:var(--lar);color:#fff;box-shadow:0 10px 24px rgba(255,90,31,.28)}
 .links a .t small{display:block;font-size:12.5px;color:var(--mut);margin-top:2px}
 .links a.top .t small{color:#FFE3D8}
+.compart{position:absolute;top:14px;right:14px;z-index:2;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.88);display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.aviso{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#111;color:#fff;font-size:13px;padding:10px 16px;border-radius:999px;opacity:0;transition:.25s;pointer-events:none}
+.aviso.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.sec{margin:34px 16px 0;display:flex;align-items:baseline;justify-content:space-between}
+.sec h2{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.sec span{font-size:12px;color:var(--mut)}
+.cases{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;padding:14px 16px 8px;scrollbar-width:none}
+.cases::after{content:"";flex:0 0 4px}
+.cases::-webkit-scrollbar{display:none}
+a.case{scroll-snap-align:start;flex:0 0 72%;text-decoration:none;background:#fff;border-radius:22px;padding:18px;color:var(--ink);display:flex;flex-direction:column;gap:6px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+a.case .loc{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--lar);font-weight:700}
+a.case b{font-size:16px;font-weight:700}
+a.case p{font-size:13.5px;line-height:1.5;color:var(--mut)}
+a.case .v{margin-top:6px;font-size:13px;font-weight:500;color:var(--ink)}
+.feiras{margin:22px 16px 0;text-align:center;font-size:13px;color:var(--mut)}
+.feiras b{color:var(--ink);font-weight:700}
+.links a,.case{animation:sobe .45s ease both}
+.links a:nth-child(2){animation-delay:.05s}.links a:nth-child(3){animation-delay:.1s}.links a:nth-child(4){animation-delay:.15s}.links a:nth-child(5){animation-delay:.2s}.links a:nth-child(6){animation-delay:.25s}
+@keyframes sobe{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 footer{margin-top:30px;text-align:center;font-size:12px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
-@media (prefers-reduced-motion:reduce){.links a{transition:none}.links a:hover{transform:none}}
+@media (prefers-reduced-motion:reduce){.links a{transition:none}.links a:hover{transform:none}.links a,.case{animation:none}}
 </style>
 </head>
 <body>
-<div class="page">
+<div class="page" style="position:relative">
+  <button class="compart" type="button" aria-label="Compartilhar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg></button>
   <div class="capa"><img src="capa.webp" alt="Escritório da Viral Móveis" width="1200" height="670"></div>
 
   <div class="topo">
     <div class="avatar"><img src="logo.webp" alt="Viral Móveis, Agência de Marketing" width="400" height="400"></div>
     <h1>Viral Móveis</h1>
-    <p class="bio">Agência especializada em loja de móveis<br><b>+237 lojas atendidas</b> · Seja o próximo case de sucesso</p>
+    <p class="bio">Agência especializada em loja de móveis<br><b>+237 lojas atendidas</b><br>Seja o próximo case de sucesso</p>
     <nav class="social" aria-label="Redes">
       <a href="https://www.instagram.com/viral.moveis/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
     </nav>
@@ -53,31 +77,50 @@ footer{margin-top:30px;text-align:center;font-size:12px;color:var(--mut);letter-
   <div class="links">
     <a class="top" href="https://wa.me/5531996304105?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20quero%20saber%20se%20a%20minha%20cidade%20ainda%20est%C3%A1%20dispon%C3%ADvel." target="_blank" rel="noopener">
       <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-      <span class="t">Minha cidade está disponível?<small>Atendemos só uma loja por cidade</small></span>
+      <span class="t">Minha cidade está disponível?<small>Atendemos só uma loja por cidade</small></span><span class="seta" aria-hidden="true">›</span>
     </a>
     <a href="https://wa.me/5531996304105?text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20Instagram" target="_blank" rel="noopener">
       <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3z"/></svg></span>
-      <span class="t">WhatsApp</span>
+      <span class="t">WhatsApp</span><span class="seta" aria-hidden="true">›</span>
     </a>
     <a href="https://wa.me/5531996304105?text=Ol%C3%A1!%20Quero%20um%20diagn%C3%B3stico%20da%20minha%20loja." target="_blank" rel="noopener">
       <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
-      <span class="t">Diagnóstico da minha loja</span>
+      <span class="t">Diagnóstico da minha loja</span><span class="seta" aria-hidden="true">›</span>
     </a>
     <a href="https://wa.me/5531996304105?text=Ol%C3%A1!%20Quero%20saber%20do%20treinamento%20comercial%20para%20os%20meus%20vendedores." target="_blank" rel="noopener">
       <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3 3 0 0 1 0 6M21 20c0-2.7-1.6-5-4-5.8"/></svg></span>
-      <span class="t">Treinamento para vendedores</span>
+      <span class="t">Treinamento para vendedores</span><span class="seta" aria-hidden="true">›</span>
     </a>
     <a href="https://www.instagram.com/stories/highlights/17851153410437190/" target="_blank" rel="noopener">
       <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></span>
-      <span class="t">Resultados de clientes</span>
+      <span class="t">Resultados de clientes</span><span class="seta" aria-hidden="true">›</span>
     </a>
     <a href="https://www.instagram.com/viral.moveis/" target="_blank" rel="noopener">
       <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".35" stop-color="#FA7E1E"/><stop offset=".6" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#ig)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="url(#ig)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="#D62976"/></svg></span>
-      <span class="t">Instagram</span>
+      <span class="t">Instagram</span><span class="seta" aria-hidden="true">›</span>
     </a>
   </div>
 
+  <div class="sec"><h2>Quem cresce com a gente</h2><span>arraste ›</span></div>
+  <div class="cases">
+    <a class="case" href="https://www.instagram.com/viral.moveis/reel/DSX_RJgER6p/" target="_blank" rel="noopener"><span class="loc">Pará</span><b>Valente Móveis</b><p>Pegamos a operação quando o Paulo tinha uma loja. Trabalho a quatro mãos desde então.</p><span class="v">Ver o vídeo ›</span></a>
+    <a class="case" href="https://www.instagram.com/viral.moveis/reel/DVJyb5aDYar/" target="_blank" rel="noopener"><span class="loc">Reconhecimento</span><b>Troféu Bianchi Móveis</b><p>O José, nosso cliente, recebeu o troféu de reconhecimento da fábrica.</p><span class="v">Ver o vídeo ›</span></a>
+    <a class="case" href="https://www.instagram.com/viral.moveis/reel/DaBmg4NkVbh/" target="_blank" rel="noopener"><span class="loc">Projeto</span><b>Casa Sonho Bom</b><p>Mais um projeto que mostra o que é viver o setor moveleiro.</p><span class="v">Ver o vídeo ›</span></a>
+    <a class="case" href="https://www.instagram.com/viral.moveis/reel/DUqhHe7FMng/" target="_blank" rel="noopener"><span class="loc">Bahia</span><b>Leolar Móveis</b><p>Loja com 171 mil seguidores falando de tráfego pago e posicionamento.</p><span class="v">Ver o vídeo ›</span></a>
+  </div>
+
+  <p class="feiras">Presença nas feiras do setor: <b>FEMUR</b> · <b>Yes Móvel Show</b></p>
+
   <footer>Uma loja por cidade · Brasil e EUA</footer>
 </div>
+<div class="aviso" role="status">Link copiado</div>
+<script>
+document.querySelector('.compart').addEventListener('click', async () => {
+  const d = {title: 'Viral Móveis', url: location.href};
+  try { if (navigator.share) { await navigator.share(d); return; } } catch (e) { return; }
+  try { await navigator.clipboard.writeText(location.href); } catch (e) {}
+  const a = document.querySelector('.aviso'); a.classList.add('on'); setTimeout(() => a.classList.remove('on'), 1800);
+});
+</script>
 </body>
 </html>
