@@ -5,75 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <title>Viral Móveis</title>
-<meta name="description" content="Marketing digital para lojas de móveis. Uma loja por cidade.">
-<meta name="theme-color" content="#14151B">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Agência especializada em loja de móveis. Uma loja por cidade.">
+<meta name="theme-color" content="#E9E9E9">
+<link rel="icon" href="logo.webp">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--lar:#FF5A1F;--ink:#14151B;--card:#1F2129;--line:#2E303B;--txt:#ECEDF2;--mut:#9A9EAB;color-scheme:dark}
+:root{--bg:#E9E9E9;--card:#FFFFFF;--ink:#111111;--mut:#555555;--lar:#FF5A1F;color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100%}
-body{background:var(--ink);background-image:radial-gradient(120% 60% at 50% -10%,rgba(255,90,31,.22),transparent 60%);color:var(--txt);font-family:Poppins,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-main{max-width:580px;margin:0 auto;padding:48px 16px 32px;display:flex;flex-direction:column;align-items:center;text-align:center}
-.avatar{width:96px;height:96px;border-radius:50%;background:#0D0E12;border:2px solid var(--lar);display:grid;place-items:center;box-shadow:0 8px 30px rgba(255,90,31,.25)}
-.avatar span{font-weight:800;font-size:27px;letter-spacing:-.04em;color:#fff;line-height:1;display:inline-block}
-.avatar span b{position:relative;font-weight:800}.avatar span i{position:absolute;left:50%;top:-2px;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:var(--lar)}
-.avatar small{display:block;color:var(--lar);font-weight:700;font-size:12px;letter-spacing:.02em;margin-top:2px}
-h1{margin-top:16px;font-size:19px;font-weight:700;color:#fff}
-.bio{margin-top:6px;font-size:14px;line-height:1.5;color:var(--mut);max-width:340px}
-.social{display:flex;gap:18px;margin-top:16px}
-.social a{color:#fff;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;transition:background .15s}
-.social a:hover{background:rgba(255,255,255,.08)}
-.links{width:100%;display:flex;flex-direction:column;gap:14px;margin-top:26px}
-.links a{position:relative;display:flex;align-items:center;justify-content:center;min-height:60px;padding:14px 56px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:#fff;text-decoration:none;font-weight:600;font-size:15px;line-height:1.3;transition:transform .15s,border-color .15s,background .15s}
-.links a:hover{transform:scale(1.02);border-color:var(--lar)}
+body{background:var(--bg);color:var(--ink);font-family:Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+.page{max-width:560px;margin:0 auto;padding-bottom:40px}
+.capa{position:relative;height:200px;overflow:hidden}
+.capa img{width:100%;height:100%;object-fit:cover;display:block}
+.capa::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-60px;height:110px;background:var(--bg);border-radius:50% 50% 0 0}
+.topo{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;margin-top:-105px;position:relative;z-index:1}
+.avatar{width:124px;height:124px;border-radius:50%;border:6px solid #F4F4F4;overflow:hidden;background:#2B2B2B;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+h1{margin-top:14px;font-size:27px;font-weight:400;letter-spacing:-.01em}
+.bio{margin-top:10px;font-size:12.5px;line-height:1.6;letter-spacing:.06em;text-transform:uppercase;max-width:360px}
+.bio b{color:var(--lar);font-weight:700;white-space:nowrap}
+.social{display:flex;gap:16px;margin-top:16px}
+.social a{color:var(--ink);display:grid;place-items:center;width:36px;height:36px}
+.links{display:flex;flex-direction:column;gap:16px;margin-top:22px;padding:0 16px}
+.links a{display:flex;align-items:center;gap:18px;min-height:76px;padding:12px 26px;border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-size:16px;line-height:1.3;box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s}
+.links a:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
 .links a:focus-visible{outline:2px solid var(--lar);outline-offset:3px}
-.links a .ic{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06)}
-.links a.top{background:var(--lar);border-color:var(--lar)}
-.links a.top .ic{background:rgba(0,0,0,.16)}
-.selos{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:28px}
-.selos span{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
-footer{margin-top:36px;font-size:12px;color:var(--mut)}
-footer b{color:#fff;font-weight:700}footer b em{font-style:normal;color:var(--lar)}
+.links a .ic{width:30px;height:30px;flex-shrink:0;display:grid;place-items:center}
+.links a.top{background:var(--lar);color:#fff}
+.links a .t small{display:block;font-size:12.5px;color:var(--mut);margin-top:2px}
+.links a.top .t small{color:#FFE3D8}
+footer{margin-top:30px;text-align:center;font-size:12px;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){.links a{transition:none}.links a:hover{transform:none}}
 </style>
 </head>
 <body>
-<main>
-  <div class="avatar" aria-hidden="true"><div><span>v<b>ı<i></i></b>ral</span><small>Móveis</small></div></div>
-  <h1>@viral.moveis</h1>
-  <p class="bio">Marketing digital para lojas de móveis. Uma loja por cidade.</p>
+<div class="page">
+  <div class="capa"><img src="capa.webp" alt="Escritório da Viral Móveis" width="1200" height="670"></div>
 
-  <nav class="social" aria-label="Redes">
-    <a href="https://www.instagram.com/viral.moveis/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-    <a href="https://wa.me/5531996304105" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3z"/></svg></a>
-  </nav>
+  <div class="topo">
+    <div class="avatar"><img src="logo.webp" alt="Viral Móveis, Agência de Marketing" width="400" height="400"></div>
+    <h1>Viral Móveis</h1>
+    <p class="bio">Agência especializada em loja de móveis<br><b>+237 lojas atendidas</b> · Seja o próximo case de sucesso</p>
+    <nav class="social" aria-label="Redes">
+      <a href="https://www.instagram.com/viral.moveis/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    </nav>
+  </div>
 
   <div class="links">
     <a class="top" href="https://wa.me/5531996304105?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20quero%20saber%20se%20a%20minha%20cidade%20ainda%20est%C3%A1%20dispon%C3%ADvel." target="_blank" rel="noopener">
-      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-      Minha cidade está disponível?
+      <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+      <span class="t">Minha cidade está disponível?<small>Atendemos só uma loja por cidade</small></span>
+    </a>
+    <a href="https://wa.me/5531996304105?text=Ol%C3%A1%20vim%20atrav%C3%A9s%20do%20Instagram" target="_blank" rel="noopener">
+      <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3z"/></svg></span>
+      <span class="t">WhatsApp</span>
     </a>
     <a href="https://wa.me/5531996304105?text=Ol%C3%A1!%20Quero%20um%20diagn%C3%B3stico%20da%20minha%20loja." target="_blank" rel="noopener">
-      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
-      Quero um diagnóstico da minha loja
+      <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+      <span class="t">Diagnóstico da minha loja</span>
     </a>
     <a href="https://wa.me/5531996304105?text=Ol%C3%A1!%20Quero%20saber%20do%20treinamento%20comercial%20para%20os%20meus%20vendedores." target="_blank" rel="noopener">
-      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3 3 0 0 1 0 6M21 20c0-2.7-1.6-5-4-5.8"/></svg></span>
-      Treinamento para vendedores
+      <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3 3 0 0 1 0 6M21 20c0-2.7-1.6-5-4-5.8"/></svg></span>
+      <span class="t">Treinamento para vendedores</span>
     </a>
     <a href="https://www.instagram.com/stories/highlights/17851153410437190/" target="_blank" rel="noopener">
-      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></span>
-      Resultados de clientes
+      <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4"/></svg></span>
+      <span class="t">Resultados de clientes</span>
     </a>
     <a href="https://www.instagram.com/viral.moveis/" target="_blank" rel="noopener">
-      <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF5A1F" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span>
-      Dicas para loja de móveis
+      <span class="ic"><svg width="28" height="28" viewBox="0 0 24 24"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".35" stop-color="#FA7E1E"/><stop offset=".6" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#ig)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="url(#ig)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="#D62976"/></svg></span>
+      <span class="t">Instagram</span>
     </a>
   </div>
 
-  <div class="selos"><span>+237 lojas atendidas</span><span>Brasil e EUA</span></div>
-
-  <footer><b>viral <em>Móveis</em></b> · Agência de marketing</footer>
-</main>
+  <footer>Uma loja por cidade · Brasil e EUA</footer>
+</div>
 </body>
 </html>
